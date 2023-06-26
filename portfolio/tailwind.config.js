@@ -33,6 +33,9 @@ module.exports = {
         black: {
           1: '#15141C',
         },
+        yellow: {
+          1: '#FFBE62',
+        },
       },
     },
   },

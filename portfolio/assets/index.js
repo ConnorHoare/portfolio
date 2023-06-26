@@ -1,10 +1,23 @@
 export { default as logo } from './logo.png';
-export {default as heroLight} from './hero_image_light.png';
-export {default as heroDark} from './hero_image_dark.png';
+export { default as heroLight } from './hero_image_light.png';
+export { default as heroDark } from './hero_image_dark.png';
 
 export { default as sunIcon } from './icons/SunIcon.svg';
 export { default as moonIcon } from './icons/MoonIcon.svg';
 export { default as hamburger } from './icons/hamburger.svg';
 export { default as cross } from './icons/plus.svg';
 export { default as next } from './icons/next.svg';
-export {default as lineDecoration} from './icons/LINE_DECORATION.svg';
+export { default as lineDecoration } from './icons/LINE_DECORATION.svg';
+export { default as cssIcon } from './icons/css.svg';
+export { default as expressIcon } from './icons/express.svg';
+export { default as gitIcon } from './icons/git.svg';
+export { default as githubIcon } from './icons/github.svg';
+export { default as htmlIcon } from './icons/html.svg';
+export { default as jsIcon } from './icons/js.svg';
+export { default as mongodbIcon } from './icons/mongodb.svg';
+export { default as muiIcon } from './icons/mui.svg';
+export { default as nodejsIcon } from './icons/nodejs.svg';
+export { default as reactIcon } from './icons/react.svg';
+export { default as reduxIcon } from './icons/redux.svg';
+export { default as tailwindIcon } from './icons/tailwind.svg';
+export { default as typescriptIcon } from './icons/typescript.svg'; 
