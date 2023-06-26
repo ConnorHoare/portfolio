@@ -13,6 +13,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        main: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         purple: {
           1: '#332885',
@@ -20,9 +23,21 @@ module.exports = {
         blue: {
           1: '#0252CD',
           2: '#6F74A7',
+          3: '#428DFF',
+        },
+        grey: {
+          1: '#9D9D9D',
+          2: '#F6F6F6',
+          3: '#BEC1D5',
+        },
+        black: {
+          1: '#15141C',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    'tailwindcss',
+    'postcss-preset-env',
+  ],
 };
