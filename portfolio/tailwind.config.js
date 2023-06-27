@@ -29,12 +29,16 @@ module.exports = {
           1: '#9D9D9D',
           2: '#F6F6F6',
           3: '#BEC1D5',
+          4: '#FFFFFF33',
         },
         black: {
           1: '#15141C',
         },
         yellow: {
           1: '#FFBE62',
+        },
+        green: {
+          1: '#56B0B9',
         },
       },
     },
