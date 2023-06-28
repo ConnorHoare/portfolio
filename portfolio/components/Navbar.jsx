@@ -26,7 +26,7 @@ const MenuItems = ({ isMobile, active, setActive, setIsOpen }) => {
                             setIsOpen(false)
                         }}
                         className={`flex flex-row items-center font-semibold text-2xl hover:text-blue-1 
-                ${isMobile ? 'mb-8' : null}
+                ${isMobile ? 'mb-8' : false}
                 ${active === link ? 'text-blue-1' : 'text-blue-2'}
                 `}
                     >
@@ -40,14 +40,13 @@ const MenuItems = ({ isMobile, active, setActive, setIsOpen }) => {
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme();
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(theme === 'dark');
     const [active, setActive] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
         setTheme(theme === 'light' ? 'dark' : 'light')
-        console.log(theme);
     }
 
     return (
