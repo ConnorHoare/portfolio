@@ -1,5 +1,8 @@
+'use client'
 import './globals.css'
+import { ThemeProvider } from 'next-themes'
 import { Inter } from 'next/font/google'
+import { Navbar } from '../../components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,8 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <ThemeProvider attribute="class">
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
