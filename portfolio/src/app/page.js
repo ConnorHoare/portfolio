@@ -141,7 +141,7 @@ export default function Home() {
         </div>
         <div className='flex justify-between gap-5 h-[519px] flex-wrap items-center'>
 
-          <div className='flex-col bg-grey-2 rounded justify-between h-[359px] drop-shadow-lg md:w-1/5'>
+          <div className='flex-col bg-grey-2 rounded justify-between drop-shadow-lg md:w-1/5'>
             <div className='flex p-4'>
               <Image src={webDesignIcon} height={62} width={62} />
             </div>
@@ -152,7 +152,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex-col bg-blue-1 rounded justify-between h-[359px] self-end drop-shadow-lg md:w-1/5 w-full'>
+          <div className='flex-col bg-blue-1 rounded justify-between self-end drop-shadow-lg md:w-1/5 w-full'>
             <div className='flex p-4'>
               <Image src={FrontEndDevIcon} height={62} width={62} />
             </div>
@@ -163,7 +163,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex-col bg-grey-2 rounded justify-between h-[359px] drop-shadow-lg md:w-1/5'>
+          <div className='flex-col bg-grey-2 rounded justify-between drop-shadow-lg md:w-1/5'>
             <div className='flex p-4'>
               <Image src={BackEndDevIcon} height={62} width={62} />
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex-col bg-grey-2 rounded justify-between h-[359px] self-end drop-shadow-lg md:w-1/5'>
+          <div className='flex-col bg-grey-2 rounded justify-between self-end drop-shadow-lg md:w-1/5'>
             <div className='flex p-4'>
               <Image src={WebOptimisationIcon} height={62} width={62} />
             </div>
@@ -206,7 +206,7 @@ export default function Home() {
             </div>
           </div>
           <div className='flex items-center'>
-            <Image src={CarRentDesktop} />
+            <Image src={CarRentDesktop} className="hidden md:flex"/>
             <div className='absolute right-0'>
               <Image src={CarRentMobile} />
             </div>
@@ -215,11 +215,11 @@ export default function Home() {
 
         <div className='flex bg-green-1 py-10 rounded relative'>
           <div className='flex items-center w-1/2 p-10 justify-start relative'>
-            <Image src={JobitDesktop} className='absolute left-0' />
-            <Image src={JobitMobile}  className='absolute right-1/4'/>
+            <Image src={JobitDesktop} className='md:absolute md:left-0 hidden md:flex' />
+            <Image src={JobitMobile}  className='md:absolute md:right-1/4 '/>
           </div>
           <div className='flex-col w-1/2 p-10'>
-            <p className='font-bold text-5xl text-white'>Morrent - A Car Rental Application</p>
+            <p className='font-bold text-5xl text-white'>Jobit - A Job Finding Application</p>
             <div className='flex gap-4 py-6 items-center'>
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>Next Js</div>
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>MongoDB</div>
