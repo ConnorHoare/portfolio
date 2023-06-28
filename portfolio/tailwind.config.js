@@ -30,6 +30,7 @@ module.exports = {
           2: '#F6F6F6',
           3: '#BEC1D5',
           4: '#FFFFFF33',
+          5: '#222330',
         },
         black: {
           1: '#15141C',

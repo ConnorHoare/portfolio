@@ -17,7 +17,10 @@ import {
   WhiteLineDecoration,
   CarRentMobile,
   JobitDesktop,
-  JobitMobile
+  JobitMobile,
+  DarkWebDesignIcon,
+  DarkBackendDevIcon,
+  DarkWebOptimizationIcon
 } from '../../assets';
 import { useTheme } from 'next-themes';
 
@@ -87,14 +90,14 @@ export default function Home() {
           </div>
           <div className='flex items-center justify-between md:w-1/2'>
             <div>
-              <button className='py-5 px-3 bg-blue-1 dark:bg-blue-3 rounded-3xl font-semibold text-white text-lg'>Contact us</button>
+              <button className='py-4 px-2 md:py-5 md:px-3 bg-blue-1 dark:bg-blue-3 rounded-3xl font-semibold text-white text-lg'>Contact us</button>
             </div>
             <div className='flex gap-3'>
-              <Image src={next} height={30} width={30} />
-              <Image src={next} height={30} width={30} />
-              <Image src={next} height={30} width={30} />
+              <Image src={next} height={30} width={30} alt='social icon'/>
+              <Image src={next} height={30} width={30} alt='social icon'/>
+              <Image src={next} height={30} width={30} alt='social icon'/>
             </div>
-            <div>
+            <div className='hidden md:flex'>
               <Image src={lineDecoration} />
             </div>
           </div>
@@ -126,7 +129,7 @@ export default function Home() {
             {
               darkSkillIcons.map((icon, index) => (
                 <div className='flex-shrink-0' key={index}>
-                  <Image src={icon.src} height={icon.height} width={icon.width} />
+                  <Image src={icon.src} height={icon.height} width={icon.width} alt={icon.alt}/>
                 </div>
               ))
             }
@@ -139,11 +142,14 @@ export default function Home() {
           <p className='text-black-1 z-10 font-bold text-4xl dark:text-white'>What service do I provide</p>
           <div className='absolute z-0 bg-yellow-1 py-4 px-10 right-[40%] top-3' />
         </div>
-        <div className='flex justify-between gap-5 h-[519px] flex-wrap items-center'>
+        <div className='flex justify-between gap-5  flex-wrap items-center'>
 
-          <div className='flex-col bg-grey-2 rounded justify-between drop-shadow-lg md:w-1/5'>
-            <div className='flex p-4'>
-              <Image src={webDesignIcon} height={62} width={62} />
+          <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between drop-shadow-lg md:w-1/5'>
+            <div className='flex p-4 dark:hidden'>
+              <Image src={webDesignIcon} height={62} width={62} alt='web design icon'/>
+            </div>
+            <div className='dark:flex p-4 hidden'>
+              <Image src={DarkWebDesignIcon} height={62} width={62} alt='web design icon'/>
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -152,9 +158,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex-col bg-blue-1 rounded justify-between self-end drop-shadow-lg md:w-1/5 w-full'>
-            <div className='flex p-4'>
-              <Image src={FrontEndDevIcon} height={62} width={62} />
+          <div className='flex-col bg-blue-1 dark:bg-blue-3 rounded justify-between self-end drop-shadow-lg md:w-1/5 '>
+            <div className='flex p-4 dark:hidden'>
+              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon'/>
+            </div>
+            <div className='dark:flex p-4 hidden'>
+              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon'/>
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -163,9 +172,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex-col bg-grey-2 rounded justify-between drop-shadow-lg md:w-1/5'>
-            <div className='flex p-4'>
-              <Image src={BackEndDevIcon} height={62} width={62} />
+          <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between drop-shadow-lg md:w-1/5'>
+            <div className='flex p-4 dark:hidden'>
+              <Image src={BackEndDevIcon} height={62} width={62} alt='back end developer icon'/>
+            </div>
+            <div className='dark:flex p-4 hidden'>
+              <Image src={DarkBackendDevIcon} height={62} width={62} alt='back end developer icon'/>
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -174,9 +186,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex-col bg-grey-2 rounded justify-between self-end drop-shadow-lg md:w-1/5'>
-            <div className='flex p-4'>
-              <Image src={WebOptimisationIcon} height={62} width={62} />
+          <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between self-end drop-shadow-lg md:w-1/5'>
+            <div className='flex p-4 dark:hidden'>
+              <Image src={WebOptimisationIcon} height={62} width={62} alt='website optimisation icon'/>
+            </div>
+            <div className='dark:flex p-4 hidden'>
+              <Image src={DarkWebOptimizationIcon} height={62} width={62} alt='website optimisation icon'/>
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -193,8 +208,8 @@ export default function Home() {
           <div className='absolute z-0 bg-yellow-1 py-4 px-10 right-[40%] top-12' />
         </div>
 
-        <div className='flex bg-blue-3 py-10 rounded relative'>
-          <div className='flex-col w-1/2 p-10'>
+        <div className='flex bg-blue-3 py-10 rounded gap-6'>
+          <div className='flex-col pl-12'>
             <p className='font-bold text-5xl text-white'>Morrent - A Car Rental Application</p>
             <div className='flex gap-4 py-6 items-center'>
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>Next Js</div>
@@ -202,23 +217,21 @@ export default function Home() {
             </div>
             <div className='flex items-center gap-6'>
               <p className='text-white'>See Detail Project</p>
-              <div><Image src={WhiteLineDecoration} /></div>
+              <div><Image src={WhiteLineDecoration} alt='line'/></div>
             </div>
           </div>
-          <div className='flex items-center'>
-            <Image src={CarRentDesktop} className="hidden md:flex"/>
-            <div className='absolute right-0'>
-              <Image src={CarRentMobile} />
-            </div>
+          <div className='hidden md:flex justify-between items-center box-border overflow-hidden pl-20'>
+            <Image src={CarRentDesktop} className='flex' alt='project image'/>
+            <Image src={CarRentMobile} className='flex self-center' alt='project image'/>
           </div>
         </div>
 
-        <div className='flex bg-green-1 py-10 rounded relative'>
-          <div className='flex items-center w-1/2 p-10 justify-start relative'>
-            <Image src={JobitDesktop} className='md:absolute md:left-0 hidden md:flex' />
-            <Image src={JobitMobile}  className='md:absolute md:right-1/4 '/>
+        <div className='flex bg-green-1 py-10 rounded gap-6'>
+          <div className='hidden md:flex justify-between items-center box-border overflow-hidden pr-36'>
+            <Image src={JobitDesktop} className='flex' alt='project image'/>
+            <Image src={JobitMobile} className='flex ' alt='project image'/>
           </div>
-          <div className='flex-col w-1/2 p-10'>
+          <div className='flex-col px-12'>
             <p className='font-bold text-5xl text-white'>Jobit - A Job Finding Application</p>
             <div className='flex gap-4 py-6 items-center'>
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>Next Js</div>
@@ -226,13 +239,13 @@ export default function Home() {
             </div>
             <div className='flex items-center gap-6'>
               <p className='text-white'>See Detail Project</p>
-              <div><Image src={WhiteLineDecoration} /></div>
+              <div><Image src={WhiteLineDecoration} alt='line'/></div>
             </div>
           </div>
         </div>
 
         <div className='items-center flex justify-around'>
-          <button className="py-2 px-4 bg-blue-1 rounded-full text-white">See More Case Studies</button>
+          <button className="py-2 px-4 bg-blue-1 dark:bg-blue-3 rounded-full text-white">See More Case Studies</button>
         </div>
 
       </div>
