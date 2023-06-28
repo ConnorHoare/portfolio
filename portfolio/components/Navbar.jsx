@@ -50,12 +50,12 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="flex flex-row items-center justify-between p-6 bg-white dark:bg-gray-800">
+        <nav className="flex flex-row items-center justify-between p-6 bg-white dark:bg-gray-800 z-40">
             <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
                 <Image src={logo} height={30} width={30} alt='logo' />
             </Link>
 
-            <div className="md:flex flex-row justify-between list-none gap-4 items-center hidden">
+            <div className="md:flex flex-row justify-between list-none gap-4 items-center hidden ">
                 <MenuItems active={active} setActive={setActive} setIsOpen={setIsOpen} />
                 <div>
                     <button onClick={toggleDarkMode} className="flex">
@@ -77,7 +77,7 @@ const Navbar = () => {
                 />
 
                 {isOpen && (
-                    <div className="fixed inset-0 top-16 z-4 nav-h flex justify-between flex-row">
+                    <div className="fixed inset-0 top-16 z-4 nav-h flex justify-between flex-row z-40">
                         <div className="flex container mx-auto w-full flex-col justify-start items-start p-4 gap-8 bg-white dark:bg-black-1">
                             <MenuItems
                                 active={active}

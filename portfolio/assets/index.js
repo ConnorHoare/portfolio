@@ -1,6 +1,52 @@
 export { default as logo } from './logo.png';
+export { default as heroLight } from './hero_image_light.png';
+export { default as heroDark } from './hero_image_dark.png';
 
 export { default as sunIcon } from './icons/SunIcon.svg';
 export { default as moonIcon } from './icons/MoonIcon.svg';
 export { default as hamburger } from './icons/hamburger.svg';
 export { default as cross } from './icons/plus.svg';
+export { default as next } from './icons/next.svg';
+export { default as lineDecoration } from './icons/LINE_DECORATION.svg';
+export { default as WhiteLineDecoration } from './icons/WhiteLineDecoration.svg';
+export { default as cssIcon } from './icons/css.svg';
+export { default as expressIcon } from './icons/express.svg';
+export { default as gitIcon } from './icons/git.svg';
+export { default as githubIcon } from './icons/github.svg';
+export { default as htmlIcon } from './icons/html.svg';
+export { default as jsIcon } from './icons/js.svg';
+export { default as mongodbIcon } from './icons/mongodb.svg';
+export { default as muiIcon } from './icons/mui.svg';
+export { default as nodejsIcon } from './icons/nodejs.svg';
+export { default as reactIcon } from './icons/react.svg';
+export { default as reduxIcon } from './icons/redux.svg';
+export { default as tailwindIcon } from './icons/tailwind.svg';
+export { default as typescriptIcon } from './icons/typescript.svg';
+
+export { default as DarkCssIcon } from './icons/DarkCssIcon.svg';
+export { default as DarkExpressIcon } from './icons/DarkExpressIcon.svg';
+export { default as DarkGithubIcon } from './icons/DarkGithubIcon.svg';
+export { default as DarkGitIcon } from './icons/DarkGitIcon.svg';
+export { default as DarkHtmlIcon } from './icons/DarkHtmlIcon.svg';
+export { default as DarkJsIcon } from './icons/DarkJsIcon.svg';
+export { default as DarkMongodbIcon } from './icons/DarkMongodbIcon.svg';
+export { default as DarkMuiIcon } from './icons/DarkMuiIcon.svg';
+export { default as DarkNextIcon } from './icons/DarkNextIcon.svg';
+export { default as DarkNodeJsIcon } from './icons/DarkNodeJSIcon.svg';
+export { default as DarkReactIcon } from './icons/DarkReactIcon.svg';
+export { default as DarkReduxIcon } from './icons/DarkReduxIcon.svg';
+export { default as DarkTailwindIcon } from './icons/DarkTailwindIcon.svg';
+export { default as DarkTypescriptIcon } from './icons/DarkTypescriptIcon.svg';
+
+export { default as webDesignIcon } from './icons/webDesignIcon.svg';
+export { default as FrontEndDevIcon } from './icons/FrontEndDevIcon.svg';
+export { default as BackEndDevIcon } from './icons/BackEndDevIcon.svg';
+export { default as WebOptimisationIcon } from './icons/WebOptIcon.svg';
+export { default as DarkWebDesignIcon } from './icons/WebDesignIconDark.svg';
+export { default as DarkBackendDevIcon } from './icons/DarkBackendDevIcon.svg';
+export {default as DarkWebOptimizationIcon} from './icons/DarkWebOptimizationIcon.svg';
+
+export { default as CarRentDesktop } from './CarRentalDesktop.png';
+export { default as CarRentMobile } from './CarRentalMobile.png';
+export { default as JobitDesktop } from './JobitDesktop.png';
+export { default as JobitMobile } from './JobitMobile.png';
