@@ -44,7 +44,7 @@ export { default as BackEndDevIcon } from './icons/BackEndDevIcon.svg';
 export { default as WebOptimisationIcon } from './icons/WebOptIcon.svg';
 export { default as DarkWebDesignIcon } from './icons/WebDesignIconDark.svg';
 export { default as DarkBackendDevIcon } from './icons/DarkBackendDevIcon.svg';
-export {default as DarkWebOptimizationIcon} from './icons/DarkWebOptimizationIcon.svg';
+export { default as DarkWebOptimizationIcon } from './icons/DarkWebOptimizationIcon.svg';
 
 export { default as CarRentDesktop } from './CarRentalDesktop.png';
 export { default as CarRentMobile } from './CarRentalMobile.png';
