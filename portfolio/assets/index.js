@@ -9,6 +9,7 @@ export { default as cross } from './icons/plus.svg';
 export { default as next } from './icons/next.svg';
 export { default as lineDecoration } from './icons/LINE_DECORATION.svg';
 export { default as WhiteLineDecoration } from './icons/WhiteLineDecoration.svg';
+export { default as ShortBlueLineIcon } from './icons/ShortBlueLineIcon.svg';
 export { default as cssIcon } from './icons/css.svg';
 export { default as expressIcon } from './icons/express.svg';
 export { default as gitIcon } from './icons/git.svg';
@@ -38,6 +39,19 @@ export { default as DarkReduxIcon } from './icons/DarkReduxIcon.svg';
 export { default as DarkTailwindIcon } from './icons/DarkTailwindIcon.svg';
 export { default as DarkTypescriptIcon } from './icons/DarkTypescriptIcon.svg';
 
+export { default as ColorCssIcon } from './icons/ColorCSSIcon.svg';
+export { default as ColorExpressIcon } from './icons/ColorExpressIcon.svg';
+export { default as ColorGithubIcon } from './icons/ColorGithubIcon.svg';
+export { default as ColorGitIcon } from './icons/ColorGitIcon.svg';
+export { default as ColorHtmlIcon } from './icons/ColorHtmlIcon.svg';
+export { default as ColorMongoDbIcon } from './icons/ColorMongoDbIcon.svg';
+export { default as ColorNextIcon } from './icons/ColorNextIcon.svg';
+export { default as ColorNodejsIcon } from './icons/ColorNodejsIcon.svg';
+export { default as ColorReactIcon } from './icons/ColorReactIcon.svg';
+export { default as ColorReduxIcon } from './icons/ColorReduxIcon.svg';
+export { default as ColorTailwindIcon } from './icons/ColorTailwindIcon.svg';
+export { default as ColorTypescriptIcon } from './icons/ColorTypescriptIcon.svg';
+
 export { default as webDesignIcon } from './icons/webDesignIcon.svg';
 export { default as FrontEndDevIcon } from './icons/FrontEndDevIcon.svg';
 export { default as BackEndDevIcon } from './icons/BackEndDevIcon.svg';
@@ -45,8 +59,18 @@ export { default as WebOptimisationIcon } from './icons/WebOptIcon.svg';
 export { default as DarkWebDesignIcon } from './icons/WebDesignIconDark.svg';
 export { default as DarkBackendDevIcon } from './icons/DarkBackendDevIcon.svg';
 export { default as DarkWebOptimizationIcon } from './icons/DarkWebOptimizationIcon.svg';
+export { default as UserFlowIcon } from './icons/UserFlowIcon.svg';
 
 export { default as CarRentDesktop } from './CarRentalDesktop.png';
 export { default as CarRentMobile } from './CarRentalMobile.png';
+export { default as CarRentMobFull } from './CarRentMobFull.png';
 export { default as JobitDesktop } from './JobitDesktop.png';
 export { default as JobitMobile } from './JobitMobile.png';
+export { default as CarImage } from './CarImage.png';
+export { default as CarRentFigma } from './CarRentFigma.png';
+export { default as UserFlowImage } from './UserFlowImage.png';
+
+export { default as DefinitionIcon } from './icons/DefinitionIcon.svg';
+export { default as PlanningIcon } from './icons/PlanningIcon.svg';
+export { default as DevlopmentIcon } from './icons/DevelopmentIcon.svg';
+export { default as DeliveryIcon } from './icons/DevliveryIcon.svg';
