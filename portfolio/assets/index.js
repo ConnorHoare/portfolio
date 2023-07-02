@@ -23,6 +23,8 @@ export { default as reactIcon } from './icons/react.svg';
 export { default as reduxIcon } from './icons/redux.svg';
 export { default as tailwindIcon } from './icons/tailwind.svg';
 export { default as typescriptIcon } from './icons/typescript.svg';
+export { default as TickIcon } from './icons/TickIcon.svg';
+export { default as BullseyeIcon } from './icons/BullseyeIcon.svg';
 
 export { default as DarkCssIcon } from './icons/DarkCssIcon.svg';
 export { default as DarkExpressIcon } from './icons/DarkExpressIcon.svg';
@@ -69,6 +71,7 @@ export { default as JobitMobile } from './JobitMobile.png';
 export { default as CarImage } from './CarImage.png';
 export { default as CarRentFigma } from './CarRentFigma.png';
 export { default as UserFlowImage } from './UserFlowImage.png';
+export { default as JobitFigma } from './JobitFigma.png';
 
 export { default as DefinitionIcon } from './icons/DefinitionIcon.svg';
 export { default as PlanningIcon } from './icons/PlanningIcon.svg';

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { CarImage, CarRentDesktop, CarRentFigma, CarRentMobFull, ColorCssIcon, ColorExpressIcon, ColorGitIcon, ColorGithubIcon, ColorHtmlIcon, ColorMongoDbIcon, ColorNextIcon, ColorNodejsIcon, ColorReactIcon, ColorReduxIcon, ColorTailwindIcon, ColorTypescriptIcon, DefinitionIcon, DeliveryIcon, DevlopmentIcon, PlanningIcon, ShortBlueLineIcon, UserFlowIcon, UserFlowImage } from '../../../../assets'
+import { BullseyeIcon, CarImage, CarRentDesktop, CarRentFigma, CarRentMobFull, ColorCssIcon, ColorExpressIcon, ColorGitIcon, ColorGithubIcon, ColorHtmlIcon, ColorMongoDbIcon, ColorNextIcon, ColorNodejsIcon, ColorReactIcon, ColorReduxIcon, ColorTailwindIcon, ColorTypescriptIcon, DefinitionIcon, DeliveryIcon, DevlopmentIcon, JobitFigma, PlanningIcon, ShortBlueLineIcon, TickIcon, UserFlowIcon, UserFlowImage } from '../../../../assets'
 
 const techStackIcon = [
   <Image src={ColorCssIcon} width={125} />,
@@ -152,9 +152,7 @@ const page = () => {
             <p className='font-bold text-4xl'>User Flow</p>
             <p className='text-blue-2'>In order to design the best experience, I've looked at the possible paths the uesr might take during their journey and examined what happens during each step. I usually create a map in Figma to get a detailed view of the User Flow</p>
           </div>
-          <div className='px-24'>
-            <Image src={UserFlowImage} />
-          </div>
+
         </div>
         <div className='w-full'>
           <Image src={UserFlowImage} style={{ objectFit: 'fill' }} />
@@ -163,7 +161,7 @@ const page = () => {
 
       <div className='flex justify-around items-center bg-grey-6 py-12'>
         <div className='flex flex-col w-full'>
-          <div className='text-left w-full self-start px-36'><p className=' text-sm font-bold'>IMAGES</p></div>
+          <div className='text-left w-full self-start px-36'><p className=' text-sm font-bold text-blue-1'>IMAGES</p></div>
           <div className='text-left w-full px-36'><p className=' text-4xl font-bold'>Product</p></div>
           <div className='flex justify-center w-full py-12'>
             <div className='flex-col'>
@@ -185,8 +183,113 @@ const page = () => {
         </div>
       </div>
 
+      <div className='flex justify-around items-center py-12'>
+        <div className='flex flex-col w-full'>
+          <div className='text-left w-full self-start px-36'><p className=' text-sm font-bold text-blue-1'>LEARNINGS & CHALLENGES</p></div>
+          <div className='text-left w-full px-36'><p className=' text-4xl font-bold'>Takeaways</p></div>
+
+          <div className='mt-12 flex flex-col bg-grey-6 rounded mx-36 p-12 space-y-4'>
+            <p className='font-bold text-green-2'>LEARNINGS</p>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={TickIcon} />
+              <p className='text-purple-3'>Gained Extensive Knowledge of full authentication and authorization implemnetation, including the use of industry-standard security protocols such as JSON Web Tokens (JWT). </p>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={TickIcon} />
+              <p className='text-purple-3'>Sharpened my backend skills, specifically in potimizing database queries, improving performance, and handling server-side logic. </p>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={TickIcon} />
+              <p className='text-purple-3'>Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized and easily accessible while keeping it secure. </p>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={TickIcon} />
+              <p className='text-purple-3'>Acquired proficiency in NextJS and implemented various featuers utilizing industry-standard best practices. </p>
+            </div>
+          </div>
+
+          <div className='mt-12 flex flex-col bg-grey-6 rounded mx-36 p-12 space-y-4'>
+            <p className='font-bold text-red-1'>CHALLENGES</p>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={BullseyeIcon} />
+              <p className='text-purple-3'>As we developed Morent, our team encountered various obstacles. One of our biggest challenges was choosing the right tools and technologies for the project.</p>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={BullseyeIcon} />
+              <p className='text-purple-3'>We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.</p>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Image src={BullseyeIcon} />
+              <p className='text-purple-3'>However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='flex justify-around items-center py-12'>
+        <div className='flex flex-col w-full'>
+          <div className='text-left w-full self-start px-36'><p className=' text-sm font-bold text-blue-1'>PROJECTS</p></div>
+          <div className='text-left w-full px-36'><p className=' text-4xl font-bold'>Other Case Studies</p></div>
+          <div className='flex flex-row justify-between px-36 py-8'>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white flex flex-col">
+              <div className="h-64 relative flex-grow">
+                <Image
+                  src={JobitFigma}
+                  style={{ objectFit: 'cover' }}
+                  className="w-full"
+                />
+              </div>
+              <div className="px-6 py-4 flex-grow">
+                <div className="font-bold text-2xl mb-2 text-blue-1">Jobit</div>
+                <p className="text-blue-2 text-base">Jobit, a web app made with Reacy and Jsearch API, links developers to millions of job openings by location emploeyment type, level and salary</p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <a className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center">See Case Study</a>
+              </div>
+            </div>
+
+            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white flex flex-col">
+              <div className="h-64 relative flex-grow">
+                <Image
+                  src={JobitFigma}
+                  style={{ objectFit: 'cover' }}
+                  className="w-full"
+                />
+              </div>
+              <div className="px-6 py-4 flex-grow">
+                <div className="font-bold text-2xl mb-2 text-blue-1">Jobit</div>
+                <p className="text-blue-2 text-base">Jobit, a web app made with Reacy and Jsearch API, links developers to millions of job openings by location emploeyment type, level and salary</p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <a className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center">See Case Study</a>
+              </div>
+            </div>
+
+            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white flex flex-col">
+              <div className="h-64 relative flex-grow">
+                <Image
+                  src={JobitFigma}
+                  style={{ objectFit: 'cover' }}
+                  className="w-full"
+                />
+              </div>
+              <div className="px-6 py-4 flex-grow">
+                <div className="font-bold text-2xl mb-2 text-blue-1">Jobit</div>
+                <p className="text-blue-2 text-base">Jobit, a web app made with Reacy and Jsearch API, links developers to millions of job openings by location emploeyment type, level and salary</p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <a className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center">See Case Study</a>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
 
   )
 }
 
-export default page
+export default page;

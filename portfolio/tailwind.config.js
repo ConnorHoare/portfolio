@@ -44,10 +44,14 @@ module.exports = {
         },
         green: {
           1: '#56B0B9',
+          2: '#47A34B',
         },
         pink: {
           1: '#FFEDFE',
           2: '#FFE7E3',
+        },
+        red: {
+          1: '#E15A46',
         },
       },
     },
