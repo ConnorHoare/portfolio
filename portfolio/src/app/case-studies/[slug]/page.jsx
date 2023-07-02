@@ -145,17 +145,47 @@ const page = () => {
         </div>
       </div>
 
-      <div className='flex flex-col'>
-          <div className='flex-col w-1/2 px-24'>
-              <Image src={UserFlowIcon}/>
-              <p className='font-bold text-4xl pl-10'>User Flow</p>
-              <p className='text-blue-2 pl-10'>In order to design the best experience, I've looked at the possible paths the uesr might take during their journey and examined what happens during each step. I usually create a map in Figma to get a detailed view of the User Flow.</p>
+      <div className='flex flex-col px-24 py-12 space-y-8'>
+        <div className='flex-col w-1/2 pl-6'>
+          <Image src={UserFlowIcon} height={75} width={75} />
+          <div className='flex-col pl-4 space-y-4'>
+            <p className='font-bold text-4xl'>User Flow</p>
+            <p className='text-blue-2'>In order to design the best experience, I've looked at the possible paths the uesr might take during their journey and examined what happens during each step. I usually create a map in Figma to get a detailed view of the User Flow</p>
           </div>
           <div className='px-24'>
             <Image src={UserFlowImage} />
           </div>
+        </div>
+        <div className='w-full'>
+          <Image src={UserFlowImage} style={{ objectFit: 'fill' }} />
+        </div>
       </div>
-    </div>
+
+      <div className='flex justify-around items-center bg-grey-6 py-12'>
+        <div className='flex flex-col w-full'>
+          <div className='text-left w-full self-start px-36'><p className=' text-sm font-bold'>IMAGES</p></div>
+          <div className='text-left w-full px-36'><p className=' text-4xl font-bold'>Product</p></div>
+          <div className='flex justify-center w-full py-12'>
+            <div className='flex-col'>
+              <div className='flex flex-row justify-center items-center'>
+                <div>
+                  <Image src={CarRentDesktop} />
+                </div>
+                <div>
+                  <Image src={CarRentMobFull} />
+                </div>
+              </div>
+              <div className='text-center'> ... </div>
+            </div>
+          </div>
+          <div className='flex flex-row items-center justify-center w-full px-36'>
+            <p className='font-semibold text-blue-1'>See Demo site</p>
+            <Image src={ShortBlueLineIcon} />
+          </div>
+        </div>
+      </div>
+
+
   )
 }
 
