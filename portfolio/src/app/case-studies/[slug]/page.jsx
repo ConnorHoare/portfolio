@@ -146,16 +146,15 @@ const page = () => {
       </div>
 
       <div className='flex flex-col'>
-          <div className='flex-col'>
+          <div className='flex-col w-1/2 px-24'>
               <Image src={UserFlowIcon}/>
-              <p className='font-bold text-4xl'>User Flow</p>
-              <p className='text-blue-2'>In order to design the best experience, I've looked at the possible paths the uesr might take during their journey and examined what happens during each step. I usually create a map in Figma to get a detailed view of the User Flow</p>
+              <p className='font-bold text-4xl pl-10'>User Flow</p>
+              <p className='text-blue-2 pl-10'>In order to design the best experience, I've looked at the possible paths the uesr might take during their journey and examined what happens during each step. I usually create a map in Figma to get a detailed view of the User Flow.</p>
           </div>
-          <div>
+          <div className='px-24'>
             <Image src={UserFlowImage} />
           </div>
       </div>
-
     </div>
   )
 }
