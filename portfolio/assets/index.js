@@ -84,3 +84,5 @@ export { default as DarkDefinitionIcon } from './icons/DarkDefinitionIcon.svg';
 export { default as DarkPlanningIcon } from './icons/DarkPlanningIcon.svg';
 export { default as DarkDevelopmentIcon } from './icons/DarkDevelopmentIcon.svg';
 export { default as DarkDeliveryIcon } from './icons/DarkDeliveryIcon.svg';
+
+export { default as ContactImage } from './ContactImage.png';
