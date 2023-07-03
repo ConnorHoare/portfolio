@@ -27,6 +27,7 @@ module.exports = {
           1: '#0252CD',
           2: '#6F74A7',
           3: '#428DFF',
+          4: '#1E9AFF',
         },
         grey: {
           1: '#9D9D9D',
@@ -34,6 +35,8 @@ module.exports = {
           3: '#BEC1D5',
           4: '#FFFFFF33',
           5: '#222330',
+          6: '#F5F6FB',
+          7: '#303245',
         },
         black: {
           1: '#15141C',
@@ -43,10 +46,14 @@ module.exports = {
         },
         green: {
           1: '#56B0B9',
+          2: '#47A34B',
         },
         pink: {
           1: '#FFEDFE',
           2: '#FFE7E3',
+        },
+        red: {
+          1: '#E15A46',
         },
       },
     },
