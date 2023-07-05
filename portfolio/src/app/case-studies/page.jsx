@@ -1,13 +1,22 @@
-'use client'
+
 import React from 'react'
 import Image from 'next/image'
-import { createClient } from 'next-sanity'
 
-import { CarRentDesktop } from '../../../../assets'
-import { apiVersion, dataset, projectId, useCdn } from '../../../../sanity/env'
+import { client, getProjects } from '../../../utils'
+import { urlForImage } from '../../../utils/sanity/image.builder'
+import  imageUrlBuilder  from '@sanity/image-url'
 
-const page = ({ projects }) => {
+const builder = imageUrlBuilder(client)
+function urlFor(source) {
+  return builder.image(source)
+}
+
+const page = async () => {
+  const projects = await getProjects();
+  // const imageSources = urlForImage(projects?.figmaImage);
+
   console.log(projects);
+
   return (
     <div className=''>
 
@@ -22,14 +31,14 @@ const page = ({ projects }) => {
 
       <div className='flex flex-col py-8'>
         <div className='flex justify-center gap-4'>
-          {projects?.length > 0 && (
-            <ul>
+          {projects.length > 0 && (
+            <ul className='flex justify-center gap-4'>
             {
-                projects?.map((project) => (
+                projects.map((project) => (
                   <div className='flex-col'>
-                    <div className='bg-pink-1 pt-8 rounded'>
+                    <div className='bg-pink-1 py-6 rounded'>
                       <div className='px-6'>
-                        <Image src={project.figmaImage} height={300} width={300}/>
+                        <Image src={urlFor(project.figmaImage).url().toString()} width={750} height={100} className='h-[500px] rounded'/>
                       </div>
                     </div>
                     <div className='px-6 py-4'>
@@ -47,26 +56,6 @@ const page = ({ projects }) => {
   )
 };
 
-const client = createClient({
-  projectId: projectId,
-  dataset: dataset,
-  apiVersion: apiVersion,
-  useCdn: useCdn
-});
 
-export async function getStaticProps() {
-  
-  const projects = await client.fetch(`*[_type == "projects"]`);
-
-  if (!projects.ok) {
-    throw new Error('failed to fetch data')
-  }
-
-  return {
-    props: {
-      projects,
-    },
-  }
-}
 
 export default page

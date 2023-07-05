@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 
-import { BullseyeIcon, CarImage, CarRentDesktop, CarRentFigma, CarRentMobFull, ColorCssIcon, ColorExpressIcon, ColorGitIcon, ColorGithubIcon, ColorHtmlIcon, ColorMongoDbIcon, ColorNextIcon, ColorNodejsIcon, ColorReactIcon, ColorReduxIcon, ColorTailwindIcon, ColorTypescriptIcon, DarkDefinitionIcon, DarkDeliveryIcon, DarkDevelopmentIcon, DarkLine, DarkPlanningIcon, DarkUserFlowIcon, DarkUserFlowImage, DefinitionIcon, DeliveryIcon, DevlopmentIcon, JobitFigma, PlanningIcon, ShortBlueLineIcon, TickIcon, UserFlowIcon, UserFlowImage } from '../../../../../assets'
+import { BullseyeIcon, CarImage, CarRentDesktop, CarRentFigma, CarRentMobFull, ColorCssIcon, ColorExpressIcon, ColorGitIcon, ColorGithubIcon, ColorHtmlIcon, ColorMongoDbIcon, ColorNextIcon, ColorNodejsIcon, ColorReactIcon, ColorReduxIcon, ColorTailwindIcon, ColorTypescriptIcon, DarkDefinitionIcon, DarkDeliveryIcon, DarkDevelopmentIcon, DarkLine, DarkPlanningIcon, DarkUserFlowIcon, DarkUserFlowImage, DefinitionIcon, DeliveryIcon, DevlopmentIcon, JobitFigma, PlanningIcon, ShortBlueLineIcon, TickIcon, UserFlowIcon, UserFlowImage } from '../../../../assets'
 
 
 
