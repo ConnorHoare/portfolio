@@ -37,6 +37,7 @@ module.exports = {
           5: '#222330',
           6: '#F5F6FB',
           7: '#303245',
+          8: '#2E2F3E',
         },
         black: {
           1: '#15141C',
@@ -51,6 +52,7 @@ module.exports = {
         pink: {
           1: '#FFEDFE',
           2: '#FFE7E3',
+          3: '#F0E7F9',
         },
         red: {
           1: '#E15A46',

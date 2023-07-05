@@ -328,7 +328,7 @@ const page = () => {
               </div>
               <div className="px-6 py-4 flex-grow">
                 <div className="font-bold text-2xl mb-2 text-blue-1 dark:text-blue-4">Jobit</div>
-                <p className="text-blue-2 text-base dark:text-grey-3">Jobit, a web app made with Reacy and Jsearch API, links developers to millions of job openings by location emploeyment type, level and salary</p>
+                <p className="text-blue-2 text-base dark:text-grey-3">Jobit, a web app made with React and Jsearch API, links developers to millions of job openings by location emploeyment type, level and salary</p>
               </div>
               <div className="px-6 pt-4 pb-2">
                 <a className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center dark:bg-blue-4">See Case Study</a>
