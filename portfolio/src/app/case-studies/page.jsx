@@ -4,7 +4,8 @@ import Image from 'next/image'
 
 import { client, getProjects } from '../../../utils'
 import { urlForImage } from '../../../utils/sanity/image.builder'
-import  imageUrlBuilder  from '@sanity/image-url'
+import imageUrlBuilder from '@sanity/image-url'
+import Link from 'next/link'
 
 const builder = imageUrlBuilder(client)
 function urlFor(source) {
@@ -33,19 +34,21 @@ const page = async () => {
         <div className='flex justify-center gap-4'>
           {projects.length > 0 && (
             <ul className='flex justify-center gap-4'>
-            {
+              {
                 projects.map((project) => (
-                  <div className='flex-col'>
-                    <div className='bg-pink-1 py-6 rounded'>
-                      <div className='px-6'>
-                        <Image src={urlFor(project.figmaImage).url().toString()} width={750} height={100} className='h-[500px] rounded'/>
+                  <Link href={`/case-studies/${project._id}`}>
+                    <div className='flex-col'>
+                      <div className='bg-pink-1 py-6 rounded'>
+                        <div className='px-6'>
+                          <Image src={urlFor(project.figmaImage).url().toString()} width={750} height={100} className='h-[500px] rounded' />
+                        </div>
+                      </div>
+                      <div className='px-6 py-4'>
+                        <p className='font-bold text-2xl text-purple-2 dark:text-white py-2'>{project.name}</p>
+                        <p className='font-light text-purple-3 dark:text-grey-3'>Car Rental Application</p>
                       </div>
                     </div>
-                    <div className='px-6 py-4'>
-                      <p className='font-bold text-2xl text-purple-2 dark:text-white py-2'>{project.name}</p>
-                      <p className='font-light text-purple-3 dark:text-grey-3'>Car Rental Application</p>
-                    </div>
-                  </div>
+                  </Link>
                 ))
               }
             </ul>
