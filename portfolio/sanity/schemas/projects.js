@@ -56,15 +56,23 @@ export default {
         },
         {
             name: 'userFlowImages',
-            type: 'array',
-            title: 'User Flow Images',
-            of: [{type: 'image'}]
+            type: 'image',
+            title: 'User Flow Images'
         },
         {
-            name:'productImages',
-            type: 'array',
-            title: 'Product Images',
-            of: [{type: 'image'}]
+            name:'productImage',
+            type: 'image',
+            title: 'Product Images'
+        },
+        {
+            name:'mobileProductImage',
+            type: 'image',
+            title: 'Mobile Product Images'
+        },
+        {
+            name:'industryImage',
+            type: 'image',
+            title: 'Ind image'
         },
         {
             name: 'learnings',

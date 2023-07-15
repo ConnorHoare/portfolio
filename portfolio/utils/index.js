@@ -11,3 +11,25 @@ export const client = createClient({
     const query = `*[_type == "projects"]`
     return client.fetch(query)
   }
+
+  export const getProjectById = async (id) => {
+    const query = `*[_type == "projects" && _id == "${id}"] {
+      name,
+      demoSiteRef ,
+      sourceCodeRef,
+      myRole,
+      startDate,
+      endDate,
+      appDescription,
+      problemStatement,
+      figmaImage,
+      learnings,
+      challenges,
+      mobileProductImage,
+      productImage,
+      userFlowImages,
+      industryImage,
+    }`
+    const result = await client.fetch(query);
+    return result 
+  }

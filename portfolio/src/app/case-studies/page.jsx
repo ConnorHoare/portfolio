@@ -14,9 +14,6 @@ function urlFor(source) {
 
 const page = async () => {
   const projects = await getProjects();
-  // const imageSources = urlForImage(projects?.figmaImage);
-
-  console.log(projects);
 
   return (
     <div className=''>
