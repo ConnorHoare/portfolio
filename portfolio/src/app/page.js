@@ -24,6 +24,7 @@ import {
 } from '../../assets';
 import { useTheme } from 'next-themes';
 import ServiceCard from '../../components/ServiceCard';
+import FeaturedProjectCard from '../../components/FeaturedProjectCard';
 
 const lightSkillIcons = [
   { src: reactIcon, height: 150, width: 150, alt: 'icon' },
@@ -185,46 +186,26 @@ export default async function Home() {
           <p className='text-black-1 z-10 font-bold text-4xl dark:text-white'>Featured Projects</p>
           <div className='absolute z-0 bg-yellow-1 py-4 px-10 right-[40%] top-12' />
         </div>
+        
+        <FeaturedProjectCard 
+          title="Morrent - A Car Rental Application"
+          tech="Next Js"
+          database="MongoDB"
+          url="0d14a4ed-4d9b-4f28-a097-04b776c80c01"
+          desktopImage={CarRentDesktop}
+          mobileImage={CarRentMobile}
+          bgColor="bg-blue-3"
+        />
 
-        <div className='flex bg-blue-3 py-10 rounded gap-6'>
-          <div className='flex-col pl-12'>
-            <p className='font-bold text-5xl text-white'>Morrent - A Car Rental Application</p>
-            <div className='flex gap-4 py-6 items-center'>
-              <div className='bg-grey-4 p-3 rounded text-white font-semibold'>Next Js</div>
-              <div className='bg-grey-4 p-3 rounded text-white font-semibold'>MongoDB</div>
-            </div>
-            <div className='flex items-center gap-6'>
-              <a className='flex flex-row items-center gap-6' href='/case-studies/0d14a4ed-4d9b-4f28-a097-04b776c80c01'>
-                <p className='text-white'>See Detail Project</p>
-                <div><Image src={WhiteLineDecoration} alt='line' /></div>
-              </a>
-            </div>
-          </div>
-          <div className='hidden md:flex justify-between items-center box-border overflow-hidden pl-20'>
-            <Image src={CarRentDesktop} className='flex' alt='project image' />
-            <Image src={CarRentMobile} className='flex self-center' alt='project image' />
-          </div>
-        </div>
-
-        <div className='flex bg-green-1 py-10 rounded gap-6'>
-          <div className='hidden md:flex justify-between items-center box-border overflow-hidden pr-36'>
-            <Image src={JobitDesktop} className='flex' alt='project image' />
-            <Image src={JobitMobile} className='flex ' alt='project image' />
-          </div>
-          <div className='flex-col px-12'>
-            <p className='font-bold text-5xl text-white'>Jobit - A Job Finding Application</p>
-            <div className='flex gap-4 py-6 items-center'>
-              <div className='bg-grey-4 p-3 rounded text-white font-semibold'>Next Js</div>
-              <div className='bg-grey-4 p-3 rounded text-white font-semibold'>MongoDB</div>
-            </div>
-            <div className='flex flex-row items-center gap-6'>
-              <a className='flex flex-row items-center gap-6' href='/case-studies/646f0e9f-9148-4272-8648-d4520ecf9b95'>
-                <p className='text-white'>See Detail Project</p>
-                <div><Image src={WhiteLineDecoration} alt='line' /></div>
-              </a>
-            </div>
-          </div>
-        </div>
+        <FeaturedProjectCard 
+          title="Jobit - A Job Finding Application"
+          tech="Next Js"
+          database="MongoDB"
+          url="646f0e9f-9148-4272-8648-d4520ecf9b95"
+          desktopImage={JobitDesktop}
+          mobileImage={JobitMobile}
+          bgColor="bg-green-1"
+        />
 
         <div className='items-center flex justify-around'>
           <a href='/case-studies' className="py-2 px-4 bg-blue-1 dark:bg-blue-3 rounded-full text-white">See More Case Studies</a>
