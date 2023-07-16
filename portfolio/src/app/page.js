@@ -58,7 +58,7 @@ const darkSkillIcons = [
   { src: DarkTypescriptIcon, height: 150, width: 150, alt: 'icon' }
 ];
 
-export default function Home() {
+export default async function Home() {
 
   const { theme } = useTheme();
 
@@ -93,9 +93,9 @@ export default function Home() {
               <button className='py-4 px-2 md:py-5 md:px-3 bg-blue-1 dark:bg-blue-3 rounded-3xl font-semibold text-white text-lg'>Contact us</button>
             </div>
             <div className='flex gap-3'>
-              <Image src={next} height={30} width={30} alt='social icon'/>
-              <Image src={next} height={30} width={30} alt='social icon'/>
-              <Image src={next} height={30} width={30} alt='social icon'/>
+              <Image src={next} height={30} width={30} alt='social icon' />
+              <Image src={next} height={30} width={30} alt='social icon' />
+              <Image src={next} height={30} width={30} alt='social icon' />
             </div>
             <div className='hidden md:flex'>
               <Image src={lineDecoration} />
@@ -129,7 +129,7 @@ export default function Home() {
             {
               darkSkillIcons.map((icon, index) => (
                 <div className='flex-shrink-0' key={index}>
-                  <Image src={icon.src} height={icon.height} width={icon.width} alt={icon.alt}/>
+                  <Image src={icon.src} height={icon.height} width={icon.width} alt={icon.alt} />
                 </div>
               ))
             }
@@ -146,10 +146,10 @@ export default function Home() {
 
           <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between drop-shadow-lg md:w-1/5'>
             <div className='flex p-4 dark:hidden'>
-              <Image src={webDesignIcon} height={62} width={62} alt='web design icon'/>
+              <Image src={webDesignIcon} height={62} width={62} alt='web design icon' />
             </div>
             <div className='dark:flex p-4 hidden'>
-              <Image src={DarkWebDesignIcon} height={62} width={62} alt='web design icon'/>
+              <Image src={DarkWebDesignIcon} height={62} width={62} alt='web design icon' />
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -160,10 +160,10 @@ export default function Home() {
 
           <div className='flex-col bg-blue-1 dark:bg-blue-3 rounded justify-between self-end drop-shadow-lg md:w-1/5 '>
             <div className='flex p-4 dark:hidden'>
-              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon'/>
+              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon' />
             </div>
             <div className='dark:flex p-4 hidden'>
-              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon'/>
+              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon' />
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -174,10 +174,10 @@ export default function Home() {
 
           <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between drop-shadow-lg md:w-1/5'>
             <div className='flex p-4 dark:hidden'>
-              <Image src={BackEndDevIcon} height={62} width={62} alt='back end developer icon'/>
+              <Image src={BackEndDevIcon} height={62} width={62} alt='back end developer icon' />
             </div>
             <div className='dark:flex p-4 hidden'>
-              <Image src={DarkBackendDevIcon} height={62} width={62} alt='back end developer icon'/>
+              <Image src={DarkBackendDevIcon} height={62} width={62} alt='back end developer icon' />
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -188,10 +188,10 @@ export default function Home() {
 
           <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between self-end drop-shadow-lg md:w-1/5'>
             <div className='flex p-4 dark:hidden'>
-              <Image src={WebOptimisationIcon} height={62} width={62} alt='website optimisation icon'/>
+              <Image src={WebOptimisationIcon} height={62} width={62} alt='website optimisation icon' />
             </div>
             <div className='dark:flex p-4 hidden'>
-              <Image src={DarkWebOptimizationIcon} height={62} width={62} alt='website optimisation icon'/>
+              <Image src={DarkWebOptimizationIcon} height={62} width={62} alt='website optimisation icon' />
             </div>
             <div className='py-16'></div>
             <div className='flex-col p-4 space-y-2'>
@@ -216,20 +216,22 @@ export default function Home() {
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>MongoDB</div>
             </div>
             <div className='flex items-center gap-6'>
-              <p className='text-white'>See Detail Project</p>
-              <div><Image src={WhiteLineDecoration} alt='line'/></div>
+              <a className='flex flex-row items-center gap-6' href='/case-studies/0d14a4ed-4d9b-4f28-a097-04b776c80c01'>
+                <p className='text-white'>See Detail Project</p>
+                <div><Image src={WhiteLineDecoration} alt='line' /></div>
+              </a>
             </div>
           </div>
           <div className='hidden md:flex justify-between items-center box-border overflow-hidden pl-20'>
-            <Image src={CarRentDesktop} className='flex' alt='project image'/>
-            <Image src={CarRentMobile} className='flex self-center' alt='project image'/>
+            <Image src={CarRentDesktop} className='flex' alt='project image' />
+            <Image src={CarRentMobile} className='flex self-center' alt='project image' />
           </div>
         </div>
 
         <div className='flex bg-green-1 py-10 rounded gap-6'>
           <div className='hidden md:flex justify-between items-center box-border overflow-hidden pr-36'>
-            <Image src={JobitDesktop} className='flex' alt='project image'/>
-            <Image src={JobitMobile} className='flex ' alt='project image'/>
+            <Image src={JobitDesktop} className='flex' alt='project image' />
+            <Image src={JobitMobile} className='flex ' alt='project image' />
           </div>
           <div className='flex-col px-12'>
             <p className='font-bold text-5xl text-white'>Jobit - A Job Finding Application</p>
@@ -237,15 +239,17 @@ export default function Home() {
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>Next Js</div>
               <div className='bg-grey-4 p-3 rounded text-white font-semibold'>MongoDB</div>
             </div>
-            <div className='flex items-center gap-6'>
-              <p className='text-white'>See Detail Project</p>
-              <div><Image src={WhiteLineDecoration} alt='line'/></div>
+            <div className='flex flex-row items-center gap-6'>
+              <a className='flex flex-row items-center gap-6' href='/case-studies/646f0e9f-9148-4272-8648-d4520ecf9b95'>
+                <p className='text-white'>See Detail Project</p>
+                <div><Image src={WhiteLineDecoration} alt='line' /></div>
+              </a>
             </div>
           </div>
         </div>
 
         <div className='items-center flex justify-around'>
-          <button className="py-2 px-4 bg-blue-1 dark:bg-blue-3 rounded-full text-white">See More Case Studies</button>
+          <a href='/case-studies' className="py-2 px-4 bg-blue-1 dark:bg-blue-3 rounded-full text-white">See More Case Studies</a>
         </div>
 
       </div>

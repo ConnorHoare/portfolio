@@ -236,10 +236,9 @@ const CaseStudiesDetail = ({ data, projects }) => {
                                     <Image src={urlFor(data.mobileProductImage).url().toString()} width={200} height={200} />
                                 </div>
                             </div>
-                            <div className='text-center'> ... </div>
                         </div>
                     </div>
-                    <div className='flex flex-row items-center justify-center w-full px-36'>
+                    <div className='flex flex-row items-center justify-center w-full px-36 py-6'>
                         <p className='font-semibold text-blue-1 dark:text-blue-4'>Demo Site</p>
                         {isDark ? (
                             <div className='items-center flex'>
@@ -292,35 +291,30 @@ const CaseStudiesDetail = ({ data, projects }) => {
                 <div className='flex flex-col w-full'>
                     <div className='text-left w-full self-start md:px-36 px-10'><p className=' text-sm font-bold text-blue-1 dark:text-blue-4'>PROJECTS</p></div>
                     <div className='text-left w-full md:px-36 px-10'><p className=' text-4xl font-bold'>Other Case Studies</p></div>
-
-                    {projects.length > 0 && (
-                        <div className='flex md:flex-row flex-col md:justify-between md:px-36 px-10 py-8 space-y-8 md:space-y-0 gap-6'>
-                            {
-                                projects.map((project) => (
-                                    <div className="md:max-w-sm w-full rounded overflow-hidden shadow-lg bg-white flex flex-col dark:bg-grey-7 pb-4">
-                                        <div className="relative flex-1">
-                                            <Image
-                                                src={urlFor(project.figmaImage).url().toString()}
-                                                style={{objectFit: 'cover'}}
-                                                height={500}
-                                                width={500}
-                                                className='w-full h-full'
-                                            />
+                        {projects.length > 0 && (
+                            <div className='flex md:flex-row flex-col md:justify-between md:px-36 px-10 py-8 space-y-8 md:space-y-0 gap-6 '>
+                                {
+                                    projects.map((project) => (
+                                        <div className="md:max-w-sm w-full rounded overflow-hidden shadow-lg bg-grey-3 flex flex-col dark:bg-grey-7 pb-4 ">
+                                                <Image
+                                                    src={urlFor(project.figmaImage).url().toString()}
+                                                    style={{ objectFit: 'fill' }}
+                                                    height={500}
+                                                    width={500}
+                                                    className='w-full'
+                                                />
+                                            <div className="px-6 py-4 flex-1">
+                                                <div className="font-bold text-2xl mb-2 text-blue-1 dark:text-blue-4">{project.name}</div>
+                                                <p className="text-blue-2 text-base dark:text-grey-3">{project.appDescription.slice(0, 100)}</p>
+                                            </div>
+                                            <div className="px-6 pt-4 pb-2">
+                                                <a href={project._id} className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center dark:bg-blue-4">See Case Study</a>
+                                            </div>
                                         </div>
-                                        <div className="px-6 py-4 flex-1">
-                                            <div className="font-bold text-2xl mb-2 text-blue-1 dark:text-blue-4">{project.name}</div>
-                                            <p className="text-blue-2 text-base dark:text-grey-3">{project.appDescription.slice(0, 100)}</p>
-                                        </div>
-                                        <div className="px-6 pt-4 pb-2">
-                                            <a href={project._id} className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center dark:bg-blue-4">See Case Study</a>
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    )}
-
-
+                                    ))
+                                }
+                            </div>
+                        )}
                 </div>
             </div>
         </div>
