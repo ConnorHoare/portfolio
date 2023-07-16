@@ -1,9 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
-import Image from 'next/image'
 import {
-  next, heroLight, lineDecoration,
- webDesignIcon,
+  webDesignIcon,
   FrontEndDevIcon,
   BackEndDevIcon,
   WebOptimisationIcon,
@@ -19,6 +17,7 @@ import { useTheme } from 'next-themes';
 import ServiceCard from '../../components/ServiceCard';
 import FeaturedProjectCard from '../../components/FeaturedProjectCard';
 import SkillSection from '../../components/SkillSection';
+import HeroSection from '../../components/HeroSection';
 
 export default async function Home() {
 
@@ -37,38 +36,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-grey-2 dark:bg-black-1">
-      <div className='flex p-24'>
-        <div className='flex-col space-y-4'>
-          <div>
-            <p className='text-[16px] text-blue-1 font-semibold self-start dark:text-blue-3'>HI, I AM CONNOR HOARE</p>
-          </div>
-          <div>
-            <p className='text-bold text-5xl self-start text-black-1 dark:text-white'>Professional Web Developer based in UK</p>
-          </div>
-          <div>
-            <p className='text-[16px] text-grey-1 dark:text-grey-3'>
-              Transforming the web one line of code at a time: Crafting cutting-edge digital experiences with precision, passion and a profound commitment to excellence
-            </p>
-          </div>
-          <div className='flex items-center justify-between md:w-1/2'>
-            <div>
-              <button className='py-4 px-2 md:py-5 md:px-3 bg-blue-1 dark:bg-blue-3 rounded-3xl font-semibold text-white text-lg'>Contact us</button>
-            </div>
-            <div className='flex gap-3'>
-              <Image src={next} height={30} width={30} alt='social icon' />
-              <Image src={next} height={30} width={30} alt='social icon' />
-              <Image src={next} height={30} width={30} alt='social icon' />
-            </div>
-            <div className='hidden md:flex'>
-              <Image src={lineDecoration} />
-            </div>
-          </div>
-        </div>
-        <div className='hidden md:flex'>
-          <Image src={heroLight} />
-        </div>
-      </div>
-
+      <HeroSection />
       <div className='flex-col px-24 py-8 bg-white dark:bg-black-1'>
         <div className='flex justify-around relative pb-4'>
           <p className='text-black-1 z-10 font-bold text-4xl dark:text-white'>My Skills</p>
@@ -131,7 +99,7 @@ export default async function Home() {
           <div className='absolute z-0 bg-yellow-1 py-4 px-10 right-[40%] top-12' />
         </div>
 
-        <FeaturedProjectCard 
+        <FeaturedProjectCard
           title="Morrent - A Car Rental Application"
           tech="Next Js"
           database="MongoDB"
@@ -141,7 +109,7 @@ export default async function Home() {
           bgColor="bg-blue-3"
         />
 
-        <FeaturedProjectCard 
+        <FeaturedProjectCard
           title="Jobit - A Job Finding Application"
           tech="Next Js"
           database="MongoDB"
