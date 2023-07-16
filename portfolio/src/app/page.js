@@ -23,6 +23,7 @@ import {
   DarkWebOptimizationIcon
 } from '../../assets';
 import { useTheme } from 'next-themes';
+import ServiceCard from '../../components/ServiceCard';
 
 const lightSkillIcons = [
   { src: reactIcon, height: 150, width: 150, alt: 'icon' },
@@ -143,62 +144,39 @@ export default async function Home() {
           <div className='absolute z-0 bg-yellow-1 py-4 px-10 right-[40%] top-3' />
         </div>
         <div className='flex justify-between gap-5  flex-wrap items-center'>
-
-          <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between drop-shadow-lg md:w-1/5'>
-            <div className='flex p-4 dark:hidden'>
-              <Image src={webDesignIcon} height={62} width={62} alt='web design icon' />
-            </div>
-            <div className='dark:flex p-4 hidden'>
-              <Image src={DarkWebDesignIcon} height={62} width={62} alt='web design icon' />
-            </div>
-            <div className='py-16'></div>
-            <div className='flex-col p-4 space-y-2'>
-              <p className='text-2xl font-bold'>Web Design</p>
-              <p>Creating visually appealing and user-friendly website that adapt to different screen sizes and devices.</p>
-            </div>
-          </div>
-
-          <div className='flex-col bg-blue-1 dark:bg-blue-3 rounded justify-between self-end drop-shadow-lg md:w-1/5 '>
-            <div className='flex p-4 dark:hidden'>
-              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon' />
-            </div>
-            <div className='dark:flex p-4 hidden'>
-              <Image src={FrontEndDevIcon} height={62} width={62} alt='front end developer icon' />
-            </div>
-            <div className='py-16'></div>
-            <div className='flex-col p-4 space-y-2'>
-              <p className='text-2xl font-bold text-white'>Front-End Dev</p>
-              <p className='text-white'>Implementing the client-side functionality of a website using HTML, CSS and JavaScript.</p>
-            </div>
-          </div>
-
-          <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between drop-shadow-lg md:w-1/5'>
-            <div className='flex p-4 dark:hidden'>
-              <Image src={BackEndDevIcon} height={62} width={62} alt='back end developer icon' />
-            </div>
-            <div className='dark:flex p-4 hidden'>
-              <Image src={DarkBackendDevIcon} height={62} width={62} alt='back end developer icon' />
-            </div>
-            <div className='py-16'></div>
-            <div className='flex-col p-4 space-y-2'>
-              <p className='text-2xl font-bold'>Back-End Dev</p>
-              <p>Building the server-side components and functionality if a website using Node.js</p>
-            </div>
-          </div>
-
-          <div className='flex-col bg-grey-2 dark:bg-grey-4 rounded justify-between self-end drop-shadow-lg md:w-1/5'>
-            <div className='flex p-4 dark:hidden'>
-              <Image src={WebOptimisationIcon} height={62} width={62} alt='website optimisation icon' />
-            </div>
-            <div className='dark:flex p-4 hidden'>
-              <Image src={DarkWebOptimizationIcon} height={62} width={62} alt='website optimisation icon' />
-            </div>
-            <div className='py-16'></div>
-            <div className='flex-col p-4 space-y-2'>
-              <p className='text-2xl font-bold'>Web Optimization</p>
-              <p>Improving website performance by optimizing page load times, and minimizing resource usage.</p>
-            </div>
-          </div>
+          <ServiceCard
+            bgColor="bg-grey-2"
+            darkColor="bg-grey-4"
+            icon={webDesignIcon}
+            darkIcon={DarkWebDesignIcon}
+            title="Web Design"
+            description="Creating visually appealing and user-friendly website that adapt to different screen sizes and devices."
+          />
+          <ServiceCard
+            bgColor="bg-blue-1"
+            darkColor="bg-blue-3"
+            textColor="text-white"
+            icon={FrontEndDevIcon}
+            darkIcon={FrontEndDevIcon}
+            title="Front-End Dev"
+            description="Implementing the client-side functionality of a website using HTML, CSS and JavaScript."
+          />
+          <ServiceCard
+            bgColor="bg-grey-2"
+            darkColor="bg-grey-4"
+            icon={BackEndDevIcon}
+            darkIcon={DarkBackendDevIcon}
+            title="Back-End Dev"
+            description="Building the server-side components and functionality if a website using Node.js"
+          />
+          <ServiceCard
+            bgColor="bg-grey-2"
+            darkColor="bg-grey-4"
+            icon={WebOptimisationIcon}
+            darkIcon={DarkWebOptimizationIcon}
+            title="Web Optimization"
+            description="Improving website performance by optimizing page load times, and minimizing resource usage."
+          />
         </div>
       </div>
 
