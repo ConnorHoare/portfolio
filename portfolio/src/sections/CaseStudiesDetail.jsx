@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 
-import { BullseyeIcon, CarImage, CarRentDesktop, CarRentFigma, CarRentMobFull, ColorCssIcon, ColorExpressIcon, ColorGitIcon, ColorGithubIcon, ColorHtmlIcon, ColorMongoDbIcon, ColorNextIcon, ColorNodejsIcon, ColorReactIcon, ColorReduxIcon, ColorTailwindIcon, ColorTypescriptIcon, DarkDefinitionIcon, DarkDeliveryIcon, DarkDevelopmentIcon, DarkLine, DarkPlanningIcon, DarkUserFlowIcon, DarkUserFlowImage, DefinitionIcon, DeliveryIcon, DevlopmentIcon, JobitFigma, PlanningIcon, ShortBlueLineIcon, TickIcon, UserFlowIcon, UserFlowImage } from '../../assets';
+import { BullseyeIcon, ColorCssIcon, ColorExpressIcon, ColorGitIcon, ColorGithubIcon, ColorHtmlIcon, ColorMongoDbIcon, ColorNextIcon, ColorNodejsIcon, ColorReactIcon, ColorReduxIcon, ColorTailwindIcon, ColorTypescriptIcon, DarkDefinitionIcon, DarkDeliveryIcon, DarkDevelopmentIcon, DarkLine, DarkPlanningIcon, DarkUserFlowIcon, DarkUserFlowImage, DefinitionIcon, DeliveryIcon, DevlopmentIcon,  PlanningIcon, ShortBlueLineIcon, TickIcon, UserFlowIcon } from '../../assets';
 import Link from "next/link";
 import { client, getProjects } from "../../utils";
 import imageUrlBuilder from '@sanity/image-url'
+import CaseStudyHero from "../../components/CaseStudyHero";
+import InfoSection from "../../components/InfoSection";
 
 const builder = imageUrlBuilder(client)
 function urlFor(source) {
@@ -47,63 +49,22 @@ const CaseStudiesDetail = ({ data, projects }) => {
         <div>
 
             <div className='flex justify-center py-6 dark:bg-black-1'>
-                <div className='flex flex-col space-y-8'>
-                    <div className='text-center'>
-                        <p className='text-blue-1 font-bold dark:text-white'>{data.name}</p>
-                    </div>
-                    <div className='text-center'>
-                        <p className='font-bold text-6xl text-blue-1 dark:text-blue-4'>{data.name}</p>
-                    </div>
-                    <div className='md:flex items-center justify-around py-4'>
-                        <Image src={urlFor(data.productImage).url().toString()} width={700} height={75} className='flex justify-center mx-auto md:mx-0' style={{ objectFit: 'cover' }} />
-                        <Image src={urlFor(data.mobileProductImage).url().toString()} width={250} height={75} className='hidden md:flex' />
-                    </div>
-                    <div className='flex justify-around'>
-                        <div className='flex gap-4'>
-
-                            <p className='font-bold text-lg text-blue-1 dark:text-blue-4'>Demo Site</p>
-                            {isDark ? (
-                                <div className='items-center flex'>
-                                    <Link href={data.demoSiteRef}><Image src={DarkLine} /></Link>
-
-                                </div>
-                            ) : (
-                                <div className='items-center flex'>
-                                    <Link href={data.demoSiteRef}><Image src={ShortBlueLineIcon} /></Link>
-
-                                </div>
-                            )}
-                        </div>
-                        <div className='flex gap-4'>
-                            <p className='font-bold text-lg text-blue-1 dark:text-blue-4'>Source Code</p>
-
-                            {isDark ? (
-                                <div className='items-center flex'>
-                                    <Image src={DarkLine} />
-                                </div>
-                            ) : (
-                                <div className='items-center flex'>
-                                    <Image src={ShortBlueLineIcon} />
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
+                <CaseStudyHero data={data} />
             </div>
 
             <div className='md:flex-row flex flex-col bg-grey-6 justify-around p-10 dark:bg-grey-5 space-y-4 md:space-y-0'>
-                <div className='flex-col md:space-y-3'>
-                    <p className='font-bold text-black-1 text-sm dark:text-white'>MY ROLE</p>
-                    <p className='font-bold text-grey-3 text-2xl'>{data.myRole}</p>
-                </div>
-                <div className='flex-col md:space-y-3'>
-                    <p className='font-bold text-black-1 text-sm dark:text-white'>START DATE</p>
-                    <p className='font-bold text-grey-3 text-2xl'>{data.startDate}</p>
-                </div>
-                <div className='flex-col md:space-y-3'>
-                    <p className='font-bold text-black-1 text-sm dark:text-white'>END DATE</p>
-                    <p className='font-bold text-grey-3 text-2xl'>{data.endDate}</p>
-                </div>
+                <InfoSection
+                    title="MY ROLE"
+                    data={data.myRole}
+                />
+                <InfoSection
+                    title="START DATE"
+                    data={data.startDate}
+                />
+                <InfoSection
+                    title="END DATE"
+                    data={data.endDate}
+                />
             </div>
 
             <div className='flex justify-around'>
@@ -291,30 +252,30 @@ const CaseStudiesDetail = ({ data, projects }) => {
                 <div className='flex flex-col w-full'>
                     <div className='text-left w-full self-start md:px-36 px-10'><p className=' text-sm font-bold text-blue-1 dark:text-blue-4'>PROJECTS</p></div>
                     <div className='text-left w-full md:px-36 px-10'><p className=' text-4xl font-bold'>Other Case Studies</p></div>
-                        {projects.length > 0 && (
-                            <div className='flex md:flex-row flex-col md:justify-between md:px-36 px-10 py-8 space-y-8 md:space-y-0 gap-6 '>
-                                {
-                                    projects.map((project) => (
-                                        <div className="md:max-w-sm w-full rounded overflow-hidden shadow-lg bg-grey-3 flex flex-col dark:bg-grey-7 pb-4 ">
-                                                <Image
-                                                    src={urlFor(project.figmaImage).url().toString()}
-                                                    style={{ objectFit: 'fill' }}
-                                                    height={500}
-                                                    width={500}
-                                                    className='w-full'
-                                                />
-                                            <div className="px-6 py-4 flex-1">
-                                                <div className="font-bold text-2xl mb-2 text-blue-1 dark:text-blue-4">{project.name}</div>
-                                                <p className="text-blue-2 text-base dark:text-grey-3">{project.appDescription.slice(0, 100)}</p>
-                                            </div>
-                                            <div className="px-6 pt-4 pb-2">
-                                                <a href={project._id} className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center dark:bg-blue-4">See Case Study</a>
-                                            </div>
+                    {projects.length > 0 && (
+                        <div className='flex md:flex-row flex-col md:justify-between md:px-36 px-10 py-8 space-y-8 md:space-y-0 gap-6 '>
+                            {
+                                projects.map((project) => (
+                                    <div className="md:max-w-sm w-full rounded overflow-hidden shadow-lg bg-grey-3 flex flex-col dark:bg-grey-7 pb-4 ">
+                                        <Image
+                                            src={urlFor(project.figmaImage).height(120).width(240).url().toString()}
+                                            style={{ objectFit: 'cover' }}
+                                            height={800}
+                                            width={800}
+                                            className='w-full'
+                                        />
+                                        <div className="px-6 py-4 flex-1">
+                                            <div className="font-bold text-2xl mb-2 text-blue-1 dark:text-blue-4">{project.name}</div>
+                                            <p className="text-blue-2 text-base dark:text-grey-3">{project.appDescription.slice(0, 100)}</p>
                                         </div>
-                                    ))
-                                }
-                            </div>
-                        )}
+                                        <div className="px-6 pt-4 pb-2">
+                                            <a href={project._id} className="inline-block bg-blue-1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center dark:bg-blue-4">See Case Study</a>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

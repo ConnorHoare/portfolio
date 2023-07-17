@@ -40,12 +40,10 @@ const MenuItems = ({ isMobile, active, setActive, setIsOpen }) => {
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme();
-    const [darkMode, setDarkMode] = useState(theme === 'dark');
     const [active, setActive] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
 
@@ -59,7 +57,7 @@ const Navbar = () => {
                 <MenuItems active={active} setActive={setActive} setIsOpen={setIsOpen} />
                 <div>
                     <button onClick={toggleDarkMode} className="flex">
-                        {darkMode ? <Image src={sunIcon} height={24} width={24} alt='light theme' className='' /> : <Image src={moonIcon} height={24} width={24} alt='dark theme' />}
+                        {theme === 'light' ? <Image src={sunIcon} height={24} width={24} alt='light theme' className='' /> : <Image src={moonIcon} height={24} width={24} alt='dark theme' />}
                     </button>
                 </div>
             </div>

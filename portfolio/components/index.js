@@ -1,1 +1,7 @@
 export { default as Navbar } from './Navbar'
+export { default as CaseStudyHero } from './CaseStudyHero'
+export { default as FeaturedProjectCard } from './FeaturedProjectCard'
+export { default as HeroSection } from './HeroSection'
+export { default as InfoSection } from './InfoSection'
+export { default as ServiceCard } from './ServiceCard'
+export { default as SkillSection } from './SkillSection'

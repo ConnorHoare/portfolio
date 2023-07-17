@@ -22,18 +22,7 @@ import HeroSection from '../../components/HeroSection';
 export default async function Home() {
 
   const { theme } = useTheme();
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
-  }, [theme])
-
-
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-grey-2 dark:bg-black-1">
       <HeroSection />
@@ -42,13 +31,7 @@ export default async function Home() {
           <p className='text-black-1 z-10 font-bold text-4xl dark:text-white'>My Skills</p>
           <div className='absolute z-0 bg-yellow-1 py-4 px-8 right-[50%] top-1' />
         </div>
-        {!isDarkMode && (
-          <SkillSection light />
-        )}
-
-        {isDarkMode && (
-          <SkillSection dark />
-        )}
+          <SkillSection isDark={theme === 'dark'} />
       </div>
 
       <div className='flex-col px-24 py-14 bg-white dark:bg-black-1 '>

@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 
 import { client, getProjects } from '../../../utils'
-import { urlForImage } from '../../../utils/sanity/image.builder'
 import imageUrlBuilder from '@sanity/image-url'
 import Link from 'next/link'
 

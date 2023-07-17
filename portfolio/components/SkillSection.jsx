@@ -46,14 +46,16 @@ const darkSkillIcons = [
     { src: DarkTypescriptIcon, height: 150, width: 150, alt: 'icon' }
 ];
 
-const SkillSection = ({ light, dark }) => {
+const SkillSection = ({ isDark }) => {
     let iconsToDisplay = [];
 
-    if (light) {
+    if (!isDark) {
         iconsToDisplay = lightSkillIcons;
-    } else if (dark) {
+    } else {
         iconsToDisplay = darkSkillIcons;
     }
+
+    console.log(isDark)
 
     return (
         <div className='flex items-center gap-2 flex-wrap justify-around'>

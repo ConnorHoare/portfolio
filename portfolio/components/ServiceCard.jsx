@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 
-const ServiceCard = ({icon, darkIcon, title, description, bgColor, darkColor, textColor}) => {
+const ServiceCard = ({ icon, darkIcon, title, description, bgColor, darkColor, textColor }) => {
+    const { theme } = useTheme()
     return (
         <div className={`flex-col ${bgColor} dark:${darkColor} rounded justify-between drop-shadow-lg md:w-1/5 ${textColor}`}>
             <div className='flex p-4 dark:hidden'>
